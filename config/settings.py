@@ -75,10 +75,12 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
 }
+
 SPECTACULAR_SETTINGS = {
     "TITLE": "Knowledge Assistant API",
     "DESCRIPTION": "Document ingestion and retrieval augmented question answering.",
     "VERSION": "1.0.0",
+    "COMPONENT_SPLIT_REQUEST": True,
 }
 
 OPENAI_API_KEY = env("OPENAI_API_KEY", default="")
